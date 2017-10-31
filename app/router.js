@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('friends');
+  this.route('new');
+  this.route('edit');
 });
 
 export default Router;

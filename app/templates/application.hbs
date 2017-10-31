@@ -1,5 +1,24 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                {{#link-to 'friends'}}
+                <em>
+                    <img alt="Sciensa" src="...">
+                </em>
+                {{/link-to}}
+            </a>
+            <a class="navbar-brand" href="#">
+                {{#link-to 'friends'}}
+                <em>Friends</em>
+                {{/link-to}}
+            </a>
+            <a class="navbar-brand" href="#">
+                {{#link-to 'new'}}
+                <em>New</em>
+                {{/link-to}}
+            </a>
+        </div>
+    </div>
+</nav>
 {{outlet}}

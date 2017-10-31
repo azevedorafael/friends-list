@@ -1,0 +1,35 @@
+<h1>New Friend</h1>
+
+<form>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        {{input type="text" value=name class="form-control" autofocus="autofocus"}}
+    </div>
+    {{#if nomeError}}
+    <div class="alert alert-danger">{{nomeError}}</div>
+    {{/if}}
+
+    <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        {{input type="text" value=lastName class="form-control" }}
+    </div>
+    {{#if sobreError}}
+    <div class="alert alert-danger">{{sobreError}}</div>
+    {{/if}}
+    <div class="form-group">
+        <label for="friendsSince">Friends Since:</label>
+        {{input type="date" value=friendsSince class="form-control"}}
+    </div>
+
+    {{#if dataError}}
+    <div class="alert alert-danger">{{dataError}}</div>
+    {{/if}}
+    <button type="submit" class="btn btn-primary" {{action 'createFriend'}}>Enviar</button>
+</form>
+
+
+{{#if messageFinal}}
+<div class="alert alert-success">{{messageFinal}}</div>
+{{/if}}
+
+{{outlet}}

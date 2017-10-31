@@ -1,0 +1,18 @@
+<h1>My Friends</h1>
+
+{{#each model as |friend|}}
+  <article class="listing">
+    <h3>{{friend.id}}</h3>
+    <div class="detail owner">
+      <span>Name:</span> {{friend.name}}
+    </div>
+    <div class="detail type">
+      <span>Last Name:</span> {{friend.lastname}}
+    </div>
+    <div class="detail location">
+      <span>Friends Since:</span> {{friend.friendsSince}}
+    </div>
+  </article>
+{{/each}}
+
+{{outlet}}
