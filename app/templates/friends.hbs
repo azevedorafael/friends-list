@@ -1,4 +1,33 @@
-<h1>My Friends</h1>
+<label for="filter-name">Search by name</label>
+{{input id="filter-name" value=name}}
+<br/>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Friends Since</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |friend|}}
+        <tr>
+            <td>
+              	{{#link-to	'friend'	friend.id}}{{friend.name}}{{/link-to}}
+            </td>
+            <td>
+                {{friend.lastName}}
+            </td>
+            <td>
+                {{friend.friendsSince}}
+            </td>
+        </tr>
+        {{/each}} {{outlet}}
+    </tbody>
+</table>
+
+
+{{!-- <h1>My Friends</h1>
 
 {{#each model as |friend|}}
   <article class="listing">
@@ -16,3 +45,4 @@
 {{/each}}
 
 {{outlet}}
+ --}}

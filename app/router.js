@@ -8,6 +8,8 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('friends');
+  //Route for friend and Dynamic Segment for friend ID
+  this.route('friend', {path: 'friend/:id'});
   this.route('new');
   this.route('edit');
 });
