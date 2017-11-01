@@ -52,6 +52,7 @@ export default Controller.extend({
                 this.set('messageFinal', `Amigo ${this.get('name')} salvo com sucesso!`);
                 this._clearWarnings();
                 this._clearFields();
+                this.transitionToRoute('lista');
             }
             else {
                 let msg = "";
@@ -68,8 +69,11 @@ export default Controller.extend({
                 }
                 // this.set('messageError',msg);
             }
-        }
+        },
 
+        saveFriendHitEnter(){
+            this.send('createFriend',	this.get('model'));
+        }
 
 
     }

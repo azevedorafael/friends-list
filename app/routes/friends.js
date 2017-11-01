@@ -25,4 +25,10 @@ export default Route.extend({
         // });
     },
 
+    actions:{
+        new(){
+            this.transitionTo('new');
+        }
+    }
+
 });

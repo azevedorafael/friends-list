@@ -3,7 +3,7 @@
 <form>
     <div class="form-group">
         <label for="name">Name:</label>
-        {{input type="text" value=name class="form-control" autofocus="autofocus"}}
+        {{input type="text" value=model.name class="form-control" autofocus="autofocus" action='saveFriendHitEnter' on='enter'}}
     </div>
     {{#if nomeError}}
     <div class="alert alert-danger">{{nomeError}}</div>
@@ -11,20 +11,20 @@
 
     <div class="form-group">
         <label for="lastName">Last Name:</label>
-        {{input type="text" value=lastName class="form-control" }}
+        {{input type="text" value=model.lastName class="form-control" }}
     </div>
     {{#if sobreError}}
     <div class="alert alert-danger">{{sobreError}}</div>
     {{/if}}
     <div class="form-group">
         <label for="friendsSince">Friends Since:</label>
-        {{input type="date" value=friendsSince class="form-control"}}
+        {{input type="date" value=model.friendsSince class="form-control"}}
     </div>
 
     {{#if dataError}}
     <div class="alert alert-danger">{{dataError}}</div>
     {{/if}}
-    <button type="submit" class="btn btn-primary" {{action 'createFriend'}}>Enviar</button>
+    <button type="submit" class="btn btn-primary" {{action 'saveFriendHitEnter' model allowedKeys="alt"}}>Enviar</button>
 </form>
 
 
