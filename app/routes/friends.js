@@ -19,9 +19,11 @@ export default Route.extend({
     model(params) {
         // let friend = this.modelFor('friends');
         // return $.get(`https://ember-interview.herokuapp.com/friends`).then(rawRepo => {
-        return this.get('friends').filter((friend) => {
-            return Ember.isEmpty(params.name) || friend.name.indexOf(params.name) >= 0;
-        });
+            let	filter	=	{};
+            if(!Ember.isEmpty(params.name)){
+                    filter.name	=	params.name;
+            }
+            return this.get('store').query('friend',	filter);
         // });
     },
 

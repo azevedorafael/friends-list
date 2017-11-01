@@ -71,8 +71,12 @@ export default Controller.extend({
             }
         },
 
-        saveFriendHitEnter(){
-            this.send('createFriend',	this.get('model'));
+        //Promisse to save new friend
+        saveFriendHitEnter() {
+            //Save request Adapter - Api address
+            friend.save().then(() => {
+                this.transitionToRoute('friends');
+            });
         }
 
 
