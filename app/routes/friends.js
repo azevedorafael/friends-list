@@ -13,13 +13,11 @@ export default Route.extend({
     model(params) {
             let	filter	=	{};
             if(!Ember.isEmpty(params.name)){
-                    filter.name	=	params.name;
+                    filter.name	=	params.name,
+                    filter.id = params.id;
             }
-            console.log(this.get('store').query('friend',	filter));
             return this.get('store').query('friend',	filter);
-            // return $.get(`https://ember-interview.herokuapp.com/friends`).then(rawOrg => {
-            //         return rawOrg;
-            // });
+
     },
 
     actions:{

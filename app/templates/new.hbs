@@ -3,30 +3,33 @@
 <form>
     <div class="form-group">
         <label for="name">Name:</label>
-        {{input type="text" value=model.name class="form-control" autofocus="autofocus" action='saveFriendHitEnter' on='enter'}}
+        {{input type="text" value=model.name class="form-control" autofocus="autofocus"}}
     </div>
-    {{#if nomeError}}
-    <div class="alert alert-danger">{{nomeError}}</div>
-    {{/if}}
 
     <div class="form-group">
-        <label for="lastName">Last Name:</label>
-        {{input type="text" value=model.lastName class="form-control" }}
+        <label for="lastname">Last Name:</label>
+        {{input type="text" value=model.lastname class="form-control" }}
     </div>
-    {{#if sobreError}}
-    <div class="alert alert-danger">{{sobreError}}</div>
-    {{/if}}
+
     <div class="form-group">
         <label for="friendsSince">Friends Since:</label>
         {{input type="date" value=model.friendsSince class="form-control"}}
     </div>
 
-    {{#if dataError}}
-    <div class="alert alert-danger">{{dataError}}</div>
-    {{/if}}
-    <button type="submit" class="btn btn-primary" {{action 'saveFriendHitEnter' model allowedKeys="alt"}}>Enviar</button>
+    <button type="submit" class="btn btn-primary" {{action 'salvar' model}}>Enviar</button>
 </form>
 
+ {{#if nomeError}}
+ <div class="alert alert-danger">{{nomeError}}</div>
+{{/if}} 
+
+{{#if sobreError}}
+<div class="alert alert-danger">{{sobreError}}</div>
+{{/if}} 
+
+{{#if dataError}}
+<div class="alert alert-danger">{{dataError}}</div>
+{{/if}}
 
 {{#if messageFinal}}
 <div class="alert alert-success">{{messageFinal}}</div>
