@@ -2,7 +2,7 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
     store:	Ember.inject.service(),
-    
+
     // isNameEnoughLong: Ember.computed.gte('name.length', 3),
     // isLastNameEnoughLong: Ember.computed.gte('lastname.length', 3),
     // isDateValid: Ember.computed('friendsSince', function () {
@@ -90,6 +90,7 @@ export default Controller.extend({
             // friend.save().then(() => {
             //     self.transitionToRoute('friends/bla');
             // });
+            console.log(friend.get('name')+""+friend.get('lastname')+""+friend.get('friendsSince'));
             friend.save();
         }
     }
