@@ -1,0 +1,39 @@
+<h1>{{title}}</h1>
+
+<form>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        {{input type="text" value=friend.name class="form-control" autofocus="autofocus"}}
+    </div>
+
+    <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        {{input type="text" value=friend.lastname class="form-control" }}
+    </div>
+
+    <div class="form-group">
+        <label for="friendsSince">Friends Since:</label>
+        {{input type="date" value=friend.friendsSince class="form-control"}}
+        {{!-- <input type="date" {{moment-format model.friendsSince 'YYYY-MM-DD'}}><input> --}}
+    </div>
+
+    <button type="submit" class="btn btn-primary" {{action 'salvar' friend}}>Enviar</button>
+</form>
+
+ {{#if nomeError}}
+ <div class="alert alert-danger">{{nomeError}}</div>
+{{/if}}
+
+{{#if sobreError}}
+<div class="alert alert-danger">{{sobreError}}</div>
+{{/if}}
+
+{{#if dataError}}
+<div class="alert alert-danger">{{dataError}}</div>
+{{/if}}
+
+{{#if messageFinal}}
+<div class="alert alert-success">{{messageFinal}}</div>
+{{/if}}
+
+{{outlet}}
