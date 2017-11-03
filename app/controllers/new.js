@@ -90,7 +90,7 @@ export default Controller.extend({
             // friend.save().then(() => {
             //     self.transitionToRoute('friends/bla');
             // });
-            console.log(friend.get('name')+""+friend.get('lastname')+""+friend.get('friendsSince'));
+            console.log(friend.get('name')+" "+friend.get('lastname')+" "+friend.get('friendsSince'));
             friend.save();
         }
     }

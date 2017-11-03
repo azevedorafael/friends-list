@@ -22,7 +22,7 @@
                 {{friend.lastname}}
             </td>
             <td>
-                {{friend.friendsSince}}
+                {{moment-format friend.friendsSince 'YYYY-MM-DD'}}
             </td>
         </tr>
         {{/each}} {{outlet}}
