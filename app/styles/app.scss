@@ -3,3 +3,11 @@
 body{
     padding: 20px;
 }
+
+nav .navbar-nav li:hover{
+    background-color: #e7e7e7;
+}
+
+nav .navbar-nav li a:hover{
+    text-decoration:none;
+}

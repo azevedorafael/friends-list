@@ -15,8 +15,9 @@ export default Route.extend({
             if(!Ember.isEmpty(params.name)){
                     filter.name	=	params.name;
             }
+            // return this.get('store').query('friend',	filter);
             return this.get('store').query('friend',	filter);
-
+            
     },
 
     actions:{

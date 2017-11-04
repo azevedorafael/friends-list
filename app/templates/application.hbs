@@ -8,17 +8,23 @@
                 </em>
                 {{/link-to}}
             </a>
-            <a class="navbar-brand" href="#">
-                {{#link-to 'friends'}}
-                <em>Friends</em>
-                {{/link-to}}
-            </a>
-            <a class="navbar-brand" href="#">
-                {{#link-to 'new'}}
-                <em>New</em>
-                {{/link-to}}
-            </a>
         </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#">
+                    {{#link-to 'friends'}}
+                    <em>Friends</em>
+                    {{/link-to}}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {{#link-to 'new'}}
+                    <em>Create New Friend</em>
+                    {{/link-to}}
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>
 {{outlet}}

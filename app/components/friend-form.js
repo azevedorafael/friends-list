@@ -86,7 +86,7 @@ export default Component.extend({
     
         actions: {
             salvar(friend) {
-                let self = this;
+                // let self = this;
                 // friend.save().then(() => {
                 //     self.transitionToRoute('friends/bla');
                 // });
