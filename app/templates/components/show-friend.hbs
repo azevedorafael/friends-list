@@ -1,5 +1,6 @@
 {{yield}}
-Id : {{friend.id}} <br/>
-Name:	{{friend.name}} <br/>
-Last Name: {{friend.lastname}} <br/>
-Friends Since: {{friend.friendsSince}}
+<h2>{{title}}</h2>
+Id : {{friend.id}}
+<br/> Name: {{friend.name}}
+<br/> Last Name: {{friend.lastname}}
+<br/> Friends Since:{{moment-format friend.friendsSince 'YYYY-MM-DD'}}

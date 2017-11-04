@@ -13,8 +13,7 @@ export default Route.extend({
     model(params) {
             let	filter	=	{};
             if(!Ember.isEmpty(params.name)){
-                    filter.name	=	params.name,
-                    filter.id = params.id;
+                    filter.name	=	params.name;
             }
             return this.get('store').query('friend',	filter);
 
