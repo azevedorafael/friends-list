@@ -6,12 +6,16 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
+Router.map(function () {
   this.route('friends');
   //Route for friend and Dynamic Segment for friend ID
-  this.route('friend', {path: 'friend/:id'});
-  this.route('edit', {path: 'friends/:id'});
+  this.route('friend', { path: 'friend/:id' });
+  this.route('edit', { path: 'friends/:id' });
   this.route('new');
+
+  // Not found - 404
+  this.route('notfound', { path: '*path' });
+
 });
 
 export default Router;
